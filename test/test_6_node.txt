@@ -1,0 +1,2137 @@
+run:
+Tham so dau vao
+test
+linkNum: 5
+MaxFlow: 200.0
+Parameters: 
+Number of functions: 4
+Max function required computing capacity: 3
+Number of demands: 2
+Min of Demand Volume: 50.0
+Max of Demand Volume: 70.0
+Range of demand volume: 0.1
+Max function number for Demand: 0.1
+Number source nodes : 2
+Rate of link connect src to core: 0.5
+Source to core bandwidth: 100.0
+Number destination nodes 3
+Rate of link connect core to dest: 0.5
+Core to dest Bandwidth : 100.0
+source node set number: 1
+node index: 0 cC: 0.0 Inlinks: 
+ 6
+ Outlinks: 
+ 1
+
+dest node set number: 1
+node index: 5 cC: 0.0 Inlinks: 
+ 3
+ Outlinks: 
+ 7
+
+core node number: 4
+node index: 1 cC: 2000.0 Inlinks: 
+ 0
+ Outlinks: 
+ 2 4
+
+node index: 2 cC: 2000.0 Inlinks: 
+ 1
+ Outlinks: 
+ 3
+
+node index: 3 cC: 2000.0 Inlinks: 
+ 2 4
+ Outlinks: 
+ 4 5
+
+node index: 4 cC: 2000.0 Inlinks: 
+ 1 3
+ Outlinks: 
+ 3
+
+
+link number: 9
+1 -> 2 : 100.0
+1 -> 4 : 100.0
+2 -> 3 : 100.0
+4 -> 3 : 100.0
+3 -> 4 : 100.0
+0 -> 1 : 200.0
+3 -> 5 : 200.0
+6 -> 0 : 1.7976931348623157E308
+5 -> 7 : 1.7976931348623157E308
+
+function number: 1
+function id: 0 require : 1
+
+demand number: 1
+Loop: 2
+0 -> 5 : 80.0-> 300.0accepted: false
+ | fcs: 1 | :  0
+ begin find All paths for demand d
+ end find All paths for demand d
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 1
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 80.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+Fbest:0.0
+Fcurrent:-7960.0
+Loop: 3
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 1
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 80.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+Fbest:0.0
+ weight link: 1.01.01.01.0
+
+Fcurrent:-7960.0
+YMin:80.0
+YMax:200.0
+All path
+Loop: 4
+path number: 0
+
+Map satis fied Paths
+Fbest:0.0
+All path
+Fcurrent:-13910.0
+YMin:140.0
+path number: 2
+YMax:200.0
+Loop: 5
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+Fbest:0.0
+ 0 fs: 
+Fcurrent:-16880.0
+ 1 fs:  0
+YMin:170.0
+YMax:200.0
+ 2 fs: 
+Loop: 6
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+Fbest:0.0
+pathweight: 4.0
+Fcurrent:-18365.0
+YMin:185.0
+YMax:200.0
+Loop: 7
+path flow rate: 40.0
+Fbest:0.0
+Fcurrent:-19107.5
+link number: 4
+YMin:192.5
+YMax:200.0
+node number: 5
+Loop: 8
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+Fbest:0.0
+All path
+Fcurrent:-19478.75
+YMin:196.25
+path number: 0
+YMax:200.0
+
+Loop: 9
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+Fbest:0.0
+mincapacity: 100.0
+pathweight: 4.0
+Fcurrent:-19664.375
+YMin:198.125
+YMax:200.0
+Loop: 10
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 70.0
+Fbest:0.0
+link number: 4
+node number: 5
+Fcurrent:-19757.1875
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+YMin:199.0625
+ 3 fs: 
+ 5 fs: 
+
+YMax:200.0
+ weight link: 1.01.01.01.0
+
+All path
+Loop: 11
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+Fbest:0.0
+pathid: 2
+mincapacity: 100.0
+Fcurrent:-19803.59375
+pathweight: 4.0
+path flow rate: 85.0
+YMin:199.53125
+YMax:200.0
+Loop: 12
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+Fbest:0.0
+path number: 2
+pathid: 1
+mincapacity: 100.0
+Fcurrent:-19826.796875
+pathweight: 4.0
+YMin:199.765625
+path flow rate: 100.0
+link number: 4
+YMax:200.0
+node number: 5
+ 0 fs: 
+Loop: 13
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 92.5
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+Fbest:0.0
+All path
+path number: 0
+
+Fcurrent:-19838.3984375
+Map satis fied Paths
+All path
+path number: 2
+YMin:199.8828125
+pathid: 1
+mincapacity: 100.0
+YMax:200.0
+pathweight: 4.0
+Loop: 14
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 96.25
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+Fbest:0.0
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+Fcurrent:-19844.19921875
+YMin:199.94140625
+YMax:200.0
+Loop: 15
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+Fbest:0.0
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+Fcurrent:-19847.099609375
+pathid: 2
+mincapacity: 100.0
+YMin:199.970703125
+pathweight: 4.0
+YMax:200.0
+path flow rate: 98.125
+Loop: 16
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.0625
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.53125
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+Fbest:0.0
+pathweight: 4.0
+Fcurrent:-19848.5498046875
+path flow rate: 100.0
+YMin:199.9853515625
+link number: 4
+YMax:200.0
+node number: 5
+Loop: 17
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+Fbest:0.0
+path flow rate: 99.765625
+link number: 4
+node number: 5
+Fcurrent:-19849.27490234375
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+YMin:199.99267578125
+ 5 fs: 
+
+YMax:200.0
+ weight link: 1.01.01.01.0
+
+All path
+Loop: 18
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+Fbest:0.0
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+Fcurrent:-19849.637451171875
+ 3 fs: 
+ 5 fs: 
+
+YMin:199.996337890625
+ weight link: 1.01.01.01.0
+pathid: 2
+YMax:200.0
+mincapacity: 100.0
+Loop: 19
+pathweight: 4.0
+path flow rate: 99.8828125
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+Fbest:0.0
+
+All path
+path number: 0
+
+Fcurrent:-19849.818725585938
+Map satis fied Paths
+All path
+YMin:199.9981689453125
+path number: 2
+pathid: 1
+YMax:200.0
+mincapacity: 100.0
+Loop: 20
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.94140625
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+Fbest:0.0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+Fcurrent:-19849.90936279297
+ weight link: 1.01.01.01.0
+
+All path
+YMin:199.99908447265625
+path number: 0
+YMax:200.0
+
+Loop: 21
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.970703125
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+Fbest:0.0
+ 3 fs: 
+ 5 fs: 
+
+Fcurrent:-19849.954681396484
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+YMin:199.99954223632812
+
+Map satis fied Paths
+YMax:200.0
+Loop: 22
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+Fbest:0.0
+node number: 5
+ 0 fs: 
+Fcurrent:-19849.977340698242
+YMin:199.99977111816406
+YMax:200.0
+Loop: 23
+Fbest:0.0
+Fcurrent:-19849.98867034912
+YMin:199.99988555908203
+YMax:200.0
+Loop: 24
+Fbest:0.0
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+Fcurrent:-19849.99433517456
+ weight link: 1.01.01.01.0
+pathid: 2
+YMin:199.99994277954102
+mincapacity: 100.0
+YMax:200.0
+pathweight: 4.0
+Loop: 25
+path flow rate: 99.9853515625
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+Fbest:0.0
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Fcurrent:-19849.99716758728
+Map satis fied Paths
+All path
+YMin:199.9999713897705
+path number: 2
+pathid: 1
+YMax:200.0
+mincapacity: 100.0
+Loop: 26
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+Fbest:0.0
+ 5 fs: 
+
+Fcurrent:-19849.99858379364
+ weight link: 1.01.01.01.0
+YMin:199.99998569488525
+pathid: 2
+YMax:200.0
+Loop: 27
+mincapacity: 100.0
+pathweight: 4.0
+Fbest:0.0
+path flow rate: 99.99267578125
+Fcurrent:-19849.99929189682
+link number: 4
+YMin:199.99999284744263
+node number: 5
+YMax:200.0
+ 0 fs: 
+Loop: 28
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+Fbest:0.0
+ weight link: 1.01.01.01.0
+
+Fcurrent:-19849.99964594841
+All path
+path number: 0
+YMin:199.9999964237213
+
+YMax:200.0
+Map satis fied Paths
+Loop: 29
+All path
+path number: 2
+pathid: 1
+Fbest:0.0
+mincapacity: 100.0
+pathweight: 4.0
+Fcurrent:-19849.999822974205
+path flow rate: 100.0
+YMin:199.99999821186066
+link number: 4
+YMax:200.0
+node number: 5
+Loop: 30
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.996337890625
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+Fbest:0.0
+path number: 0
+
+Map satis fied Paths
+Fcurrent:-19849.999911487103
+All path
+path number: 2
+pathid: 1
+YMin:199.99999910593033
+mincapacity: 100.0
+pathweight: 4.0
+YMax:200.0
+Loop: 31
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+Fbest:0.0
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+Fcurrent:-19849.99995574355
+pathweight: 4.0
+YMin:199.99999955296516
+path flow rate: 99.9981689453125
+YMax:200.0
+link number: 4
+Loop: 32
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+Fbest:0.0
+Fcurrent:-19849.999977871776
+YMin:199.99999977648258
+YMax:200.0
+Loop: 33
+path number: 0
+
+Map satis fied Paths
+Fbest:0.0
+All path
+path number: 2
+Fcurrent:-19849.999988935888
+pathid: 1
+mincapacity: 100.0
+YMin:199.9999998882413
+pathweight: 4.0
+path flow rate: 100.0
+YMax:200.0
+link number: 4
+Loop: 34
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99908447265625
+Fbest:0.0
+link number: 4
+node number: 5
+ 0 fs: 
+Fcurrent:-19849.999994467944
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+YMin:199.99999994412065
+
+ weight link: 1.01.01.01.0
+YMax:200.0
+
+All path
+Loop: 35
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+Fbest:0.0
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+Fcurrent:-19849.999997233972
+ 3 fs: 
+ 5 fs: 
+
+YMin:199.99999997206032
+ weight link: 1.01.01.01.0
+pathid: 2
+YMax:200.0
+mincapacity: 100.0
+Loop: 36
+pathweight: 4.0
+path flow rate: 99.99954223632812
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+Fbest:0.0
+Fcurrent:-19849.999998616986
+YMin:199.99999998603016
+YMax:200.0
+Loop: 37
+All path
+path number: 0
+
+Map satis fied Paths
+Fbest:0.0
+All path
+path number: 2
+pathid: 1
+Fcurrent:-19849.999999308493
+mincapacity: 100.0
+pathweight: 4.0
+YMin:199.99999999301508
+path flow rate: 100.0
+YMax:200.0
+link number: 4
+node number: 5
+Loop: 38
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+Fbest:0.0
+pathweight: 4.0
+path flow rate: 99.99977111816406
+link number: 4
+node number: 5
+Fcurrent:-19849.999999654246
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+YMin:199.99999999650754
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+YMax:200.0
+
+All path
+Loop: 39
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+Fbest:0.0
+node number: 5
+ 0 fs: 
+Fcurrent:-19849.999999827123
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+YMin:199.99999999825377
+YMax:200.0
+Loop: 40
+Fbest:0.0
+Fcurrent:-19849.99999991356
+YMin:199.99999999912689
+YMax:200.0
+Loop: 41
+Fbest:0.0
+Fcurrent:-19849.99999995678
+YMin:199.99999999956344
+YMax:200.0
+Loop: 42
+Fbest:0.0
+Fcurrent:-19849.99999997839
+YMin:199.99999999978172
+YMax:200.0
+Loop: 43
+Fbest:0.0
+Fcurrent:-19849.999999989195
+YMin:199.99999999989086
+YMax:200.0
+Loop: 44
+Fbest:0.0
+Fcurrent:-19849.999999994598
+YMin:199.99999999994543
+YMax:200.0
+Loop: 45
+Fbest:0.0
+Fcurrent:-19849.9999999973
+YMin:199.99999999997272
+YMax:200.0
+Loop: 46
+Fbest:0.0
+Fcurrent:-19849.99999999865
+YMin:199.99999999998636
+YMax:200.0
+Loop: 47
+Fbest:0.0
+Fcurrent:-19849.999999999323
+YMin:199.99999999999318
+YMax:200.0
+Loop: 48
+Fbest:0.0
+Fcurrent:-19849.99999999966
+YMin:199.9999999999966
+YMax:200.0
+Loop: 49
+Fbest:0.0
+Fcurrent:-19849.99999999983
+YMin:199.9999999999983
+YMax:200.0
+Loop: 50
+Fbest:0.0
+Fcurrent:-19849.999999999916
+YMin:199.99999999999915
+YMax:200.0
+Loop: 51
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+Fbest:0.0
+path flow rate: 99.99988555908203
+link number: 4
+Fcurrent:-19849.999999999956
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+YMin:199.99999999999957
+ 4 fs: 
+ 3 fs: 
+YMax:200.0
+Loop: 52
+Fbest:0.0
+ 5 fs: 
+
+Fcurrent:-19849.999999999978
+ weight link: 1.01.01.01.0
+
+All path
+YMin:199.99999999999977
+path number: 0
+YMax:200.0
+
+Loop: 53
+Map satis fied Paths
+All path
+Fbest:0.0
+path number: 2
+pathid: 1
+mincapacity: 100.0
+Fcurrent:-19849.99999999999
+pathweight: 4.0
+path flow rate: 100.0
+YMin:199.9999999999999
+link number: 4
+node number: 5
+YMax:200.0
+ 0 fs: 
+ 1 fs:  0
+Loop: 54
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+Fbest:0.0
+ weight link: 1.01.01.01.0
+pathid: 2
+Fcurrent:-19849.999999999993
+mincapacity: 100.0
+pathweight: 4.0
+YMin:199.99999999999994
+path flow rate: 99.99994277954102
+YMax:200.0
+link number: 4
+Loop: 55
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+Fbest:0.0
+path number: 0
+
+Map satis fied Paths
+Fcurrent:-19850.0
+All path
+path number: 2
+YMin:199.99999999999997
+pathid: 1
+mincapacity: 100.0
+YMax:200.0
+pathweight: 4.0
+Loop: 56
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+Fbest:0.0
+pathid: 2
+mincapacity: 100.0
+Fcurrent:-19850.0
+pathweight: 4.0
+YMin:200.0
+path flow rate: 99.99997138977051
+link number: 4
+YMax:200.0
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99998569488525
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999284744263
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999642372131
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999821186066
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999910593033
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999955296516
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999977648258
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999988824129
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999994412065
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999997206032
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999998603016
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999999301508
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999999650754
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999999825377
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999999912689
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999999956344
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999999978172
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999999989086
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999999994543
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999999997272
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999999998636
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999999999318
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999999999659
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.9999999999983
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999999999915
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999999999957
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999999999977
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999999999989
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999999999994
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 99.99999999999997
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+All path
+path number: 0
+
+Map satis fied Paths
+All path
+path number: 2
+pathid: 1
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 2 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+pathid: 2
+mincapacity: 100.0
+pathweight: 4.0
+path flow rate: 100.0
+link number: 4
+node number: 5
+ 0 fs: 
+ 1 fs:  0
+ 4 fs: 
+ 3 fs: 
+ 5 fs: 
+
+ weight link: 1.01.01.01.0
+
+demand number: 1
+0 -> 5 : 200.0 : 0.0 | fcs: 1 | :  0
+BUILD SUCCESSFUL (total time: 0 seconds)
