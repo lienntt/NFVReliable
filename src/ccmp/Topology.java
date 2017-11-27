@@ -66,7 +66,7 @@ public class Topology extends BaseTopology {
     double alpha = 0;
     double beta = 0;
     int maxNumberShortestPaths;
-    int scheme = 2; //scheme 1:fit other pro
+    int scheme = 1; //scheme 1:fit other pro
     double bestMaxUtilizationLink = 0;
     double bestMaxUtilizationNode = 0;
     int numberErrorLink = 0;
@@ -572,6 +572,11 @@ public class Topology extends BaseTopology {
         d.printAllShortestPaths();
 
         boolean mapSatisfiedPaths = false;
+        //lienntt : kiem tra mindemandVolume
+        if(d.getVolume() < d.getMinDemandVolume()){
+            d.isAccepted = false;
+            return;
+        }
         if (scheme ==1) {
             mapSatisfiedPaths = d.PathRateFit(maxNumberShortestPaths);
         } else {

@@ -114,7 +114,7 @@ public class CCMP {
             String scheme = "PRFit";
             if(topo.scheme==2) scheme = "PRPro";
              writer.write(String.valueOf("NumD   MaxP    alpha   beta    scheme  NumError \n"));
-             writer.write(String.valueOf(topo.demands.size()) 
+             writer.write(String.valueOf(topo.calNumberScheduledDemands()) 
                     + " " + String.valueOf(topo.maxNumberShortestPaths) 
                     + " " + String.valueOf(topo.alpha) 
                     + " " + String.valueOf(topo.beta) 

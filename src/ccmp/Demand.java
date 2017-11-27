@@ -745,7 +745,7 @@ public class Demand {
 
         for (int i = 0; i < numberPaths; i++) {
             Path p = allDisjointShortestPaths.get(i);
-            double mapVolume = Math.floor(p.getMinAvailableCapacity() * unscheduledDemendVolume / totalAvailable);
+            double mapVolume = p.getMinAvailableCapacity() * unscheduledDemendVolume / totalAvailable;
 
             if (i == numberPaths - 1) {
                 mapVolume = unscheduledDemendVolume - _scheduleDemandVolume;
