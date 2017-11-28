@@ -67,10 +67,10 @@ public class Topology extends BaseTopology {
     double beta = 0;
     int maxNumberShortestPaths;
     int scheme = 2; //scheme 1:fit other pro
-    int disjointScheme = 1; // disjointScheme: 1 default disjoint incompletely, other disjoint completely
+    int disjointScheme = 2; // disjointScheme: 1 default disjoint incompletely, other disjoint completely
     double bestMaxUtilizationLink = 0;
     double bestMaxUtilizationNode = 0;
-    int numberErrorLink = 0;
+    int numberErrorLink = 5 ;
 
     public Topology() {
     }
@@ -485,6 +485,7 @@ public class Topology extends BaseTopology {
             return;
         }
         yMin = findMinOfMinBandwidthVolumeFromDemands();
+        alpha = yMin;
         yMax = Fmax / demands.size();
         System.out.println("YMin:" + yMin);
         System.out.println("YMax:" + yMax);
@@ -613,6 +614,17 @@ public class Topology extends BaseTopology {
         return min;
     }
 
+     //max(bandwidth(yd))
+    public double findMaxOfBandwidthVolumeFromDemands() {
+        double min = demands.get(0).getVolume();
+        for (Demand d : demands) {
+            if (min < d.getVolume()) {
+                min = d.getVolume();
+            }
+        }
+        return min;
+    }
+
     //min (bandwidth(ydbest))
     public double findMinOfBandwidthVolumeFromBestDemands() {
         if(bestDemands.isEmpty()){
@@ -653,8 +665,9 @@ public class Topology extends BaseTopology {
 
     //khong thoa man het cac demand
     public void updateForUnsatisfiedDemands() {
-        // can tren = min(bandwidth(yd))
-        yMax = findMinOfBandwidthVolumeFromDemands()-1;
+        // can tren = max(bandwidth(yd))
+//        yMax = findMinOfBandwidthVolumeFromDemands()-1;
+        yMax = findMaxOfBandwidthVolumeFromDemands()-1;
         
         for (Demand d : demands) {
             //bandwidth(yd) = max(min(ymax, (can tren + can duoi)/2),ymin)

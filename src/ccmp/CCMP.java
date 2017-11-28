@@ -33,12 +33,12 @@ public class CCMP {
         //datafile
         System.out.println(args[0]);
 
-        String datafile = args[1]+".txt";
-        String pathfile = args[1]+"-paths.txt";
-        String resultfile  = args[1]+"-results.txt";
-        String parafile  = args[1]+"-paras.txt";
+        String datafile = args[1] + ".txt";
+        String pathfile = args[1] + "-paths.txt";
+        String resultfile = args[1] + "-results.txt";
+        String parafile = args[1] + "-paras.txt";
         switch (args[0]) {
-             case "findpaths":
+            case "findpaths":
                 topo = new Topology(datafile);
                 topo.printTopology();
                 topo.findAllPathsForAllDemands();
@@ -69,6 +69,51 @@ public class CCMP {
                 writeParameters(parafile);
                 writeResults(resultfile);
                 break;
+            case "Experiment":
+                writeTitleResult(resultfile, "//npath nerror F acceptD uL uN minDVolume \n");
+                for (int disjoint = 1; disjoint <= 2; disjoint++) {
+                    String disjoingScheme = (disjoint == 1) ? "false" : "true";
+                    for (int scheme = 1; scheme <= 2; scheme++) {
+                        String pathrateScheme = (scheme == 1) ? "Fit" : "Pro";
+                        writeTitleResult(resultfile, "\n //" + pathrateScheme + " /np /er = 0 disjoint = " + disjoingScheme + " \n");
+                        
+                        for (int np = 1; np <= 6; np++) {
+                            topo = new Topology(datafile);
+                            topo.getAllPathsForAllDemands(pathfile);
+                            topo.scheme = scheme;//fit
+                            topo.disjointScheme = disjoint;//incompletely disjoint
+                            topo.numberErrorLink = 0;
+                            topo.maxNumberShortestPaths = np;
+                            topo.AlphaBetaMultipath();
+                            writeParameters(parafile);
+                            writeResults(resultfile);
+                        }
+                    }
+                }
+                for (int disjoint = 1; disjoint <= 2; disjoint++) {
+                    String disjoingScheme = (disjoint == 1) ? "false" : "true";
+                    for (int scheme = 1; scheme <= 2; scheme++) {
+                        String pathrateScheme = (scheme == 1) ? "Fit" : "Pro";
+                        writeTitleResult(resultfile, "\n //" + pathrateScheme + " /np=3 /er = 0 disjoint = " + disjoingScheme + " \n");
+                        
+                        for (int loop = 0; loop < 20; loop++) {
+                            writeTitleResult(resultfile, "\n //#" + loop + "\n");
+                            for (int ne = 0; ne < 10; ne++) {
+                                topo = new Topology(datafile);
+                                topo.getAllPathsForAllDemands(pathfile);
+                                topo.scheme = scheme;//fit
+                                topo.disjointScheme = disjoint;//incompletely disjoint
+                                topo.numberErrorLink = ne;
+                                topo.maxNumberShortestPaths = 3;
+                                topo.generateErrorLinks();
+                                topo.AlphaBetaMultipath();
+                                writeParameters(parafile);
+                                writeResults(resultfile);
+                            }
+                        }
+                    }
+                }
+                break;
         }
 
     }
@@ -77,13 +122,16 @@ public class CCMP {
         try {
             // writer.write("# accepted demand / maximum link utilization\n");
             BufferedWriter writer = new BufferedWriter(new FileWriter(new File(outputfile), true));
-           
-            writer.write(String.valueOf(topo.Fbest) + " "
-                    + String.valueOf(topo.acceptedDemandBest) + " " 
-                    + String.valueOf(topo.calSatisfiedDemandsVolume() ) +" "
-                    + String.valueOf(topo.bestMaxUtilizationLink ) +" "
-                    + String.valueOf(topo.bestMaxUtilizationNode ) +" "
-                    + String.valueOf(topo.findMinOfBandwidthVolumeFromBestDemands() ) +" "
+
+            writer.write(
+                    String.valueOf(topo.maxNumberShortestPaths) + " "
+                    + String.valueOf(topo.numberErrorLink) + " "
+                    + String.valueOf(topo.Fbest) + " "
+                    + String.valueOf(topo.acceptedDemandBest) + " "
+                    + String.valueOf(topo.calSatisfiedDemandsVolume()) + " "
+                    + String.valueOf(topo.bestMaxUtilizationLink) + " "
+                    + String.valueOf(topo.bestMaxUtilizationNode) + " "
+                    + String.valueOf(topo.findMinOfBandwidthVolumeFromBestDemands()) + " "
                     + "\n");
             writer.close();
         } catch (Exception e) {
@@ -91,42 +139,46 @@ public class CCMP {
             System.exit(-1);
         }
     }
-//    
-//    public static void writeOneLineResult(String outputfile){
-//        try {
-//            BufferedWriter writer = new BufferedWriter(new FileWriter(new File(outputfile), true));
-//            writer.write(String.valueOf(topo.demands.size()) 
-//                    + " " + String.valueOf(topo.numberScheduledDemands()) 
-//                    + " " + String.valueOf(topo.calSatisfiedDemandsVolume()) 
-//                    + " " + String.valueOf(topo.findMinOfBandwidthVolumeFromBestDemands()) 
-//                    + " " + String.valueOf(topo.bestMaxUtilizationLink) 
-//                    + " " + String.valueOf(topo.bestMaxUtilizationNode + "\n") );
-//
-//            writer.close();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            System.exit(-1);
-//        }
-//    }
-     public static void writeParameters(String outputfile) {
+
+    public static void writeTitleResult(String outputfile, String title) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(new File(outputfile), true));
-            String scheme = "PRFit";
-            if(topo.scheme==2) scheme = "PRPro";
-             writer.write(String.valueOf("NumD   MaxP    alpha   beta    scheme  NumError \n"));
-             writer.write(String.valueOf(topo.calNumberScheduledDemands()) 
-                    + " " + String.valueOf(topo.maxNumberShortestPaths) 
-                    + " " + String.valueOf(topo.alpha) 
-                    + " " + String.valueOf(topo.beta) 
-                    + " " + String.valueOf(scheme) 
-                    + " " + String.valueOf(topo.numberErrorLink + "\n") );
+            writer.write(String.valueOf(title)
+                    + "\n");
             writer.close();
         } catch (Exception e) {
             e.printStackTrace();
             System.exit(-1);
         }
     }
-    
+
+    public static void writeParameters(String outputfile) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(new File(outputfile), true));
+            String scheme = "PRFit";
+            String disjointScheme = "incompletely";
+            if (topo.scheme != 1) {
+                scheme = "PRPro";
+            }
+            if (topo.disjointScheme != 1) {
+                scheme = "completely";
+            }
+            writer.write(String.valueOf("NumD   MaxP  NumError  alpha   beta    PathRateScheme DisjointScheme   \n"));
+            writer.write(String.valueOf(topo.calNumberScheduledDemands())
+                    + " " + String.valueOf(topo.maxNumberShortestPaths)
+                    + " " + String.valueOf(topo.numberErrorLink)
+                    + " " + String.valueOf(topo.alpha)
+                    + " " + String.valueOf(topo.beta)
+                    + " " + String.valueOf(scheme)
+                    + " " + String.valueOf(disjointScheme)
+                    + "\n");
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.exit(-1);
+        }
+    }
+
     public static void writePaths(String outputfile) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(new File(outputfile), true));
@@ -148,5 +200,4 @@ public class CCMP {
             System.exit(-1);
         }
     }
-
 }
