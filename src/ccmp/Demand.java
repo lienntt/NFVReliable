@@ -719,39 +719,51 @@ public class Demand {
         paths.clear();
         scheduledDemandVolume=0;
         sortDisjointPathsDecreaseAccordingToMinCapacity();
-         System.out.println("Number of shortestPaths : " + allDisjointShortestPaths.size());
-         for (int i = 0; i < allDisjointShortestPaths.size(); i++) {
-          System.out.println("Number of shortestPaths : " +allDisjointShortestPaths.get(i).getMinAvailableCapacity());
-        }
+//         System.out.println("Number of shortestPaths : " + allDisjointShortestPaths.size());
+//         for (int i = 0; i < allDisjointShortestPaths.size(); i++) {
+//          System.out.println("Number of shortestPaths : " +allDisjointShortestPaths.get(i).getMinAvailableCapacity());
+//        }
         int numberPaths = Math.min(maxNumberShortestPaths, allDisjointShortestPaths.size());
         double totalAvailable = 0;
         double unscheduledDemendVolume = getUnscheduledDemandVolume();
-        double _scheduleDemandVolume = 0;
+        int numberSmallestPaths = 0;
 
         for (int i = 0; i < numberPaths; i++) {
             Path p = allDisjointShortestPaths.get(i);
             totalAvailable += p.getMinAvailableCapacity();
+            if(totalAvailable >= unscheduledDemendVolume)
+                numberSmallestPaths = i+1;
         }
         System.out.println("PathRatePro");
         System.out.println("totalAvailable: " + totalAvailable);
         System.out.println("demand volume unscheduled: " + getUnscheduledDemandVolume());
+        System.out.println("numberSmallestPaths " + numberSmallestPaths);
+        System.out.println("numberPaths " + numberPaths);
 
-
+        //k thoa man cung cap demand
         if (totalAvailable < unscheduledDemendVolume) {
-            printPaths();
+//            printPaths();
             isAccepted = false;
             return false;
         }
 
-        for (int i = 0; i < numberPaths; i++) {
+        //thoa man cung cap demand
+        //lay ra so duong it nhat ma tong bandwidth lon hon demand volume
+        for (int i = 0; i < numberSmallestPaths; i++) {
             Path p = allDisjointShortestPaths.get(i);
             double mapVolume = p.getMinAvailableCapacity() * unscheduledDemendVolume / totalAvailable;
-
-            if (i == numberPaths - 1) {
-                mapVolume = unscheduledDemendVolume - _scheduleDemandVolume;
+            
+//            if (i == numberPaths - 1) {
+//                mapVolume = unscheduledDemendVolume - _scheduleDemandVolume;
+//            }
+            //tim cach thoa man xp nguyen
+            if(p.getMinAvailableCapacity() - Math.ceil(mapVolume) >=0 ){
+                mapVolume = Math.ceil(mapVolume);
+            }else{
+                mapVolume = Math.floor(mapVolume);
             }
+            mapVolume = Math.min(mapVolume,getUnscheduledDemandVolume());
             p.setFlowRate(mapVolume);
-            _scheduleDemandVolume += mapVolume;
             scheduledDemandVolume += mapVolume;
             p.updateBandwidthCapacityForLinks();
             paths.add(p);

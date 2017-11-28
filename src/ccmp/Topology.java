@@ -66,7 +66,7 @@ public class Topology extends BaseTopology {
     double alpha = 0;
     double beta = 0;
     int maxNumberShortestPaths;
-    int scheme = 1; //scheme 1:fit other pro
+    int scheme = 2; //scheme 1:fit other pro
     double bestMaxUtilizationLink = 0;
     double bestMaxUtilizationNode = 0;
     int numberErrorLink = 0;
@@ -572,11 +572,11 @@ public class Topology extends BaseTopology {
         d.printAllShortestPaths();
 
         boolean mapSatisfiedPaths = false;
-        //lienntt : kiem tra mindemandVolume
-        if(d.getVolume() < d.getMinDemandVolume()){
-            d.isAccepted = false;
-            return;
-        }
+//        //lienntt : kiem tra mindemandVolume
+//        if(d.getVolume() < d.getMinDemandVolume()){
+//            d.isAccepted = false;
+//            return;
+//        }
         if (scheme ==1) {
             mapSatisfiedPaths = d.PathRateFit(maxNumberShortestPaths);
         } else {
@@ -635,6 +635,20 @@ public class Topology extends BaseTopology {
         }
         return true;
     }
+    
+     //tat cac cac demand deu thoa man
+    public void updateForSatisfiedDemands() {
+        //can duoi  = min(bandwidth(yd))
+        yMin = findMinOfBandwidthVolumeFromDemands()+1;
+        for (Demand d : demands) {
+            //bandwidth(yd) = min(max(ydmin, (can tren + can duoi)/2),ydmax)
+//            d.setDemandVolume(Math.min(d.getMinDemandVolume(), Math.ceil((yMax + yMin) / 2)));
+            d.setDemandVolume(Math.min(Math.max(d.getMinDemandVolume(), Math.ceil((yMax + yMin) / 2)), d.getMaxDemandVolume()));
+        }
+        System.out.println("UpdateFor Satisfied" );
+        printYd();
+    }
+
 
     //khong thoa man het cac demand
     public void updateForUnsatisfiedDemands() {
@@ -642,8 +656,8 @@ public class Topology extends BaseTopology {
         yMax = findMinOfBandwidthVolumeFromDemands()-1;
         
         for (Demand d : demands) {
-            //bandwidth(yd) = min(ymax, (can tren + can duoi)/2)
-            d.setDemandVolume(Math.min(d.getMaxDemandVolume(), Math.floor((yMax + yMin) / 2)));
+            //bandwidth(yd) = max(min(ymax, (can tren + can duoi)/2),ymin)
+            d.setDemandVolume(Math.max(Math.min(d.getMaxDemandVolume(), Math.floor((yMax + yMin) / 2)),d.getMinDemandVolume()));
         }
         System.out.println("UpdateFor Unsatisfied" );
         printYd();
@@ -661,18 +675,7 @@ public class Topology extends BaseTopology {
         }
     }
 
-    //tat cac cac demand deu thoa man
-    public void updateForSatisfiedDemands() {
-        //can duoi  = min(bandwidth(yd))
-        yMin = findMinOfBandwidthVolumeFromDemands()+1;
-        for (Demand d : demands) {
-            //bandwidth(yd) = min(ymax, (can tren + can duoi)/2)
-            d.setDemandVolume(Math.max(d.getMinDemandVolume(), Math.ceil((yMax + yMin) / 2)));
-        }
-        System.out.println("UpdateFor Satisfied" );
-        printYd();
-    }
-
+   
     //GanNode()
     public void mapNodeForAllPathsOfDemand(Demand d) {
         for (Path p : d.paths) {
