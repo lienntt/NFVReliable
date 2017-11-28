@@ -67,6 +67,7 @@ public class Topology extends BaseTopology {
     double beta = 0;
     int maxNumberShortestPaths;
     int scheme = 2; //scheme 1:fit other pro
+    int disjointScheme = 1; // disjointScheme: 1 default disjoint incompletely, other disjoint completely
     double bestMaxUtilizationLink = 0;
     double bestMaxUtilizationNode = 0;
     int numberErrorLink = 0;
@@ -720,7 +721,7 @@ public class Topology extends BaseTopology {
     }
 
     public Demand findMultiDisjointShortestPathFor(Demand d){
-        d.getAllDisjointShortestPaths(maxNumberShortestPaths);
+        d.getAllDisjointShortestPaths(maxNumberShortestPaths,disjointScheme);
         System.out.println("Number of DisjointShortestPaths : " + d.allDisjointShortestPaths.size());
         return d;
     }

@@ -265,27 +265,21 @@ public class Demand {
         return disjointPaths;
     }
 
-     public void getAllDisjointShortestPaths(int maxp) {
+     public void getAllDisjointShortestPaths(int maxp, int disjointScheme) {
          allDisjointShortestPaths.clear();
-         for(Path p: _getAllDisjointShortestPaths(maxp)){
+         for(Path p: _getAllDisjointShortestPaths(maxp, disjointScheme)){
              allDisjointShortestPaths.add(new Path (p));
          }
 //         allDisjointShortestPaths = _getAllDisjointShortestPaths(maxp);
      }
     //find a set of maxpath disjoint shortest paths
-    public ArrayList<Path> _getAllDisjointShortestPaths(int maxp) {
+    public ArrayList<Path> _getAllDisjointShortestPaths(int maxp, int disjointScheme) {
 
         getAllShortestPaths();
+        
         //tinh path capacity cho 
         calculateMinCapacityForAllPaths();
-//        if(maxp<=1){
-//            return allShortestPaths;
-//        }
-//        //if there is only one path return this path
-//        if(allShortestPaths.size()<=1){
-//            allShortestPaths.clear();
-//            return allShortestPaths;
-//        }
+
         if (maxp <= 1 || allShortestPaths.size() <= 1) {
             return allShortestPaths;
         }
@@ -295,28 +289,57 @@ public class Demand {
         //so that total bandwidth of the set of paths is the largest
         //step1: sap xep cac path theo min capacity giam dan
         sortPathsDecreaseAccordingToMinCapacity();
+        
         //stetp2: lay ra 2 duong disjoint
         ArrayList<Path> disjointPaths = findTwoDisjointPaths();
         
         System.out.println("result of FindTwoDisjointPaths " + disjointPaths.size());
 
         //if there is no disjointPaths
+        //return a path that has max of min capacity
         if (disjointPaths.isEmpty()) {
             System.out.println("Pahtvolume: " + allShortestPaths.get(0).getMinAvailableCapacity() + "; "+ allShortestPaths.get(1).getMinAvailableCapacity() );
             disjointPaths.add(allShortestPaths.get(0));
             allShortestPaths = disjointPaths;
             return allShortestPaths;
         }
-
+        //if there are some disjointPaths
         //step3: lay them cac duong co capacity lon nhat cho du maxp
-        int maxPaths = Math.min(maxp, allShortestPaths.size()) - 2;
-        for (Path p : allShortestPaths) {
-            if (maxPaths > 0 && !disjointPaths.contains(p)) {
-                disjointPaths.add(p);
-                maxPaths -= 1;
+        int maxPaths;
+        //if disjointScheme =1: disjoint incompletely
+        if(disjointScheme == 1){
+            maxPaths = Math.min(maxp, allShortestPaths.size()) - 2;
+            for (Path p : allShortestPaths) {
+                if (maxPaths > 0 && !disjointPaths.contains(p)) {
+                    disjointPaths.add(p);
+                    maxPaths -= 1;
+                }
+            }
+            System.out.println("disjoint incomplete numpaths: " + disjointPaths.size());
+            printPathList(disjointPaths);
+            return disjointPaths;
+        }
+        
+        //else disjoint completely
+        //lay them cac duong disjoint cho du so duong
+        maxPaths = Math.min(maxp, allShortestPaths.size()) - 2;
+        boolean foundNewPath;
+        for(Path p: allShortestPaths){
+            foundNewPath = true;
+            if(maxPaths > 0 && !disjointPaths.contains(p)){
+                for(Path pi: disjointPaths){
+                    if(!checkDisjoint(p, pi)){
+                        foundNewPath = false;
+                    }
+                }
+                if(foundNewPath){
+                    disjointPaths.add(p);
+                    maxPaths -= 1;
+                }
             }
         }
-//        allShortestPaths = disjointPaths;
+        System.out.println("disjointcomplete numpaths: " + disjointPaths.size());
+        printPathList(disjointPaths);
         return disjointPaths;
     }
 
